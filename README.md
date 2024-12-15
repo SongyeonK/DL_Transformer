@@ -1,18 +1,14 @@
 ### WARNING
-Transformer 모델 추가학습
+Transformer 모델 추가학습 (하단에 출처 기재)
 
 # Transformer
 My own implementation Transformer model (Attention is All You Need - Google Brain, 2017)
-<br><br>
-![model](image/model.png)
-<br><br>
+
 
 ## 1. Implementations
 
 ### 1.1 Positional Encoding
 
-![model](image/positional_encoding.jpg)
-   
     
 ```python
 class PositionalEncoding(nn.Module):
@@ -60,8 +56,6 @@ class PositionalEncoding(nn.Module):
 
 ### 1.2 Multi-Head Attention
 
-
-![model](image/multi_head_attention.jpg)
 
 ```python
 class MultiHeadAttention(nn.Module):
@@ -126,7 +120,6 @@ class MultiHeadAttention(nn.Module):
 
 ### 1.3 Scale Dot Product Attention
 
-![model](image/scale_dot_product_attention.jpg)
 
 ```python
 class ScaleDotProductAttention(nn.Module):
@@ -167,7 +160,6 @@ class ScaleDotProductAttention(nn.Module):
 
 ### 1.4 Layer Norm
 
-![model](image/layer_norm.jpg)
     
 ```python
 class LayerNorm(nn.Module):
@@ -191,7 +183,6 @@ class LayerNorm(nn.Module):
 
 ### 1.5 Positionwise Feed Forward
 
-![model](image/positionwise_feed_forward.jpg)
     
 ```python
 
@@ -215,8 +206,7 @@ class PositionwiseFeedForward(nn.Module):
 
 ### 1.6 Encoder & Decoder Structure
 
-![model](image/enc_dec.jpg)
-    
+
 ```python
 class EncoderLayer(nn.Module):
 
@@ -359,7 +349,7 @@ I use Multi30K Dataset to train and evaluate model <br>
 You can check detail of dataset [here](https://arxiv.org/abs/1605.00459) <br>
 I follow original paper's parameter settings. (below) <br>
 
-![conf](image/transformer-model-size.jpg)
+!
 ### 2.1 Model Specification
 
 * total parameters = 55,207,087
@@ -387,7 +377,6 @@ I follow original paper's parameter settings. (below) <br>
 
 ### 2.2 Training Result
 
-![image](saved/transformer-base/train_result.jpg)
 * Minimum Training Loss = 2.852672759656864
 * Minimum Validation Loss = 3.2048025131225586 
 <br><br>
